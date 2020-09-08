@@ -3,7 +3,7 @@ from django.db import models
 
 class Patient(models.Model):
     name = models.CharField(max_length=120, unique=True)
-    mobile_no = models.IntegerField()
+    mobile_no = models.IntegerField(unique=True)
     address = models.CharField(max_length=120)
     problem = models.CharField(max_length=20)
 
